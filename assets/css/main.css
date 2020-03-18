@@ -2250,8 +2250,10 @@ input, select, textarea {
 			#main > section.one {
 				background-color: #81918E;
 				background-image: url("../../images/banner_new1.jpg");
+/*
                 filter: blur(8px);
                 -webkit-filter: blur(8px);
+*/
 			}
 
 			#main > section.two {
