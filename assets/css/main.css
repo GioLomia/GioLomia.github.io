@@ -2128,6 +2128,7 @@ input, select, textarea {
 		list-style: none;
 		padding-left: 0;
 		margin-bottom: 0;
+        width: 200px;
 	}
 
 		#nav ul li {
