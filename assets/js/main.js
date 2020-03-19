@@ -9,7 +9,7 @@
 	var	$window = $(window),
 		$body = $('body'),
 		$nav = $('#nav');
-
+	// let scrolls=0;
 	// Breakpoints.
 		breakpoints({
 			wide:      [ '961px',  '1880px' ],
@@ -25,6 +25,28 @@
 				$body.removeClass('is-preload');
 			}, 100);
 		});
+		$window.on('scroll', function(){
+			let scrollPosition = $window.scrollTop();
+			if (scrollPosition > 500){
+				scrollPosition = 500;
+			}
+			else if (scrollPosition<210){
+				scrollPosition = 210;
+			}
+			let scrollPosString = String("+="+String(scrollPosition)); 
+			let CSSscrollPosString = String((42/(scrollPosition/10000))/100)+"%";
+			let CSSscrollPosOpacity = String(200/scrollPosition);
+			console.log(scrollPosString);
+			console.log(CSSscrollPosString);
+			// $("#header").animate({scale: scrollPosString}, {queue: false, duration: 1});
+			$("#header").animate({width: CSSscrollPosString,
+								  opacity: CSSscrollPosOpacity},
+									{duration:5});
+
+			// $("#header")
+			// $("#nav").toggle("scale",{percent:30,direction:"horizontal"},2000);
+			// $nav_a.removeClass('active');
+		}) 
 
 	// Nav.
 		var $nav_a = $nav.find('a');
@@ -32,9 +54,9 @@
 		$nav_a
 			.addClass('scrolly')
 			.on('click', function(e) {
-
+				console.log("Nav Active")
 				var $this = $(this);
-
+				console.log($nav_a)
 				// External link? Bail.
 					if ($this.attr('href').charAt(0) != '#')
 						return;
@@ -43,6 +65,7 @@
 					e.preventDefault();
 
 				// Deactivate all links.
+					// console.log($nav_a);
 					$nav_a.removeClass('active');
 
 				// Activate link *and* lock it (so Scrollex doesn't try to activate other links as we're scrolling to this one's section).
@@ -51,6 +74,10 @@
 						.addClass('active-locked');
 
 			})
+			// .on('scroll', function(){
+			// 	console.log("I am scrolling");
+			// 	$nav_a.removeClass('active');
+			// }) 
 			.each(function() {
 
 				var	$this = $(this),

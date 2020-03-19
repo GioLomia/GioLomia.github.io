@@ -2096,7 +2096,7 @@ input, select, textarea {
 
 	#logo {
 		position: relative;
-		margin: 1.75em 1.5em 1.5em 1.5em;
+		margin: 0.5em 0.5em 0.5em 0.5em;
 		min-height: 48px;
 		cursor: default;
 	}
@@ -2124,11 +2124,24 @@ input, select, textarea {
 			top: 0;
 		}
 
+    #pers_title{
+        position: relative;
+    }
+        #pers_title h1{
+            position: relative;
+            padding-left: 90px;
+        }
+        #pers_title p{
+            position: relative;
+            padding-left: 90px;
+        }
+
 	#nav ul {
+		position: absolute;
 		list-style: none;
 		padding-left: 0;
 		margin-bottom: 0;
-        width: 200px;
+        width: 60%;
 	}
 
 		#nav ul li {
