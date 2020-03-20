@@ -9,6 +9,9 @@
 	var	$window = $(window),
 		$body = $('body'),
 		$nav = $('#nav');
+		$nav_text = $('#nav > ul > li > a > span');
+		console.log($nav_text);
+	// $('#main').width($window.width());
 	// let scrolls=0;
 	// Breakpoints.
 		breakpoints({
@@ -25,29 +28,52 @@
 				$body.removeClass('is-preload');
 			}, 100);
 		});
-		$window.on('scroll', function(){
-			let scrollPosition = $window.scrollTop();
-			if (scrollPosition > 500){
-				scrollPosition = 500;
+		
+		console.log($window.width());
+		if ($window.width()>=960){		
+			$window.on('scroll', function(){
+				
+			if ($window.width()>=960){
+				let scrollPosition = $window.scrollTop();
+				if (scrollPosition>=300){
+					$('#software_eng').animate({opacity: 0, height: 30}, {duration: 1});
+				}
+				else{$('#software_eng').animate({opacity: 1, height: 30}, {duration: 1});}
+				
+				if (scrollPosition > ($window.width()*0.2508)+183.12){
+					scrollPosition = ($window.width()*0.2508)+183.12;
+				}
+				else if (scrollPosition<210){
+					scrollPosition = 210;
+				}
+				let CSSscrollPosString = String((45/(scrollPosition/10000))/100)+"%";
+				let CSSscrollPosOpacity = String(30/scrollPosition);
+				console.log(CSSscrollPosString);
+				// console.log(CSSscrollPosOpacity);
+				console.log(scrollPosition)
+				
+				if (scrollPosition > 380){
+					// console.log($("#links-to-me span:first"));
+					$('#intro-tab, #about-tab, #education-tab, #projects-tab, #contact-tab, #pers_title').animate({opacity: 0, height: 30}, {duration: 1});
+				}
+				else {
+					$('#intro-tab, #about-tab, #education-tab, #projects-tab, #contact-tab, #pers_title').animate({opacity: 1, height: 30}, {duration: 1});
+					$nav_text.animate({opacity: 1}, {duration: 1});
+					
+				}
+				$("#header").animate({width: CSSscrollPosString},
+									//   opacity: CSSscrollPosOpacity},
+										{duration:10});
+				$('#main').animate({marginLeft: CSSscrollPosString},{duration: 10});
 			}
-			else if (scrollPosition<210){
-				scrollPosition = 210;
-			}
-			let scrollPosString = String("+="+String(scrollPosition)); 
-			let CSSscrollPosString = String((42/(scrollPosition/10000))/100)+"%";
-			let CSSscrollPosOpacity = String(200/scrollPosition);
-			console.log(scrollPosString);
-			console.log(CSSscrollPosString);
-			// $("#header").animate({scale: scrollPosString}, {queue: false, duration: 1});
-			$("#header").animate({width: CSSscrollPosString,
-								  opacity: CSSscrollPosOpacity},
-									{duration:5});
-
-			// $("#header")
-			// $("#nav").toggle("scale",{percent:30,direction:"horizontal"},2000);
-			// $nav_a.removeClass('active');
 		}) 
-
+		}
+		
+		$('#berea').mouseover(function(){
+			$('<div id="headerToggle">' +
+			'<a href="#header" class="toggle"></a>' +
+		'</div>').appendTo($body);
+		});
 	// Nav.
 		var $nav_a = $nav.find('a');
 
@@ -74,10 +100,7 @@
 						.addClass('active-locked');
 
 			})
-			// .on('scroll', function(){
-			// 	console.log("I am scrolling");
-			// 	$nav_a.removeClass('active');
-			// }) 
+
 			.each(function() {
 
 				var	$this = $(this),
@@ -146,5 +169,6 @@
 					target: $body,
 					visibleClass: 'header-visible'
 				});
+
 
 })(jQuery);
