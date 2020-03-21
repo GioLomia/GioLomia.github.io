@@ -2096,7 +2096,7 @@ input, select, textarea {
 
 	#logo {
 		position: relative;
-		margin: 1.75em 1.5em 1.5em 1.5em;
+		margin: 0.5em 0.5em 0.5em 0.5em;
 		min-height: 48px;
 		cursor: default;
 	}
@@ -2119,16 +2119,28 @@ input, select, textarea {
 		}
 
 		#logo .image {
-			position: absolute;
+			position: relative;
 			left: 0;
 			top: 0;
 		}
+
+    #pers_title{
+        position: relative;
+    }
+        #pers_title h1{
+            position: relative;
+            padding-left: 90px;
+        }
+        #pers_title p{
+            position: relative;
+            padding-left: 90px;
+        }
 
 	#nav ul {
 		list-style: none;
 		padding-left: 0;
 		margin-bottom: 0;
-        width: 200px;
+        width: 100%;
 	}
 
 		#nav ul li {
@@ -2206,10 +2218,13 @@ input, select, textarea {
 /* Main */
 
 	#main {
-		margin-left: 375px;
+		margin-left: 0px;
+		position: relative;
 	}
 
 		#main > section {
+			position: relative;
+			
 			margin: 0;
 			overflow: hidden;
 			padding: 4em 0;
@@ -2254,6 +2269,7 @@ input, select, textarea {
 			}
 
 			#main > section.two {
+
 				background-color: #f5fafa;
 			}
 
@@ -2264,7 +2280,26 @@ input, select, textarea {
 			#main > section.four {
 				background-color: #e8edec;
 			}
-
+	#deep {
+		width: 70%;
+		height: 40%;
+		margin-left: 10%;
+	}
+	#detective {
+		margin-top: 20%;
+		width: 70%;
+		height: 70%;
+		margin-left: 10%;
+	}
+	#kwf {
+		width: 90%;
+		height: 40%;
+	}
+	#Instaparse {
+		width: 90%;
+		height: 10%;
+		margin-top: 10%;
+	}
 /* Wide */
 
 	@media screen and (min-width: 961px) and (max-width: 1880px) {

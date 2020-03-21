@@ -9,7 +9,10 @@
 	var	$window = $(window),
 		$body = $('body'),
 		$nav = $('#nav');
-
+		$nav_text = $('#nav > ul > li > a > span');
+		console.log($nav_text);
+	// $('#main').width($window.width());
+	// let scrolls=0;
 	// Breakpoints.
 		breakpoints({
 			wide:      [ '961px',  '1880px' ],
@@ -25,16 +28,61 @@
 				$body.removeClass('is-preload');
 			}, 100);
 		});
-
+		
+		console.log($window.width());
+		if ($window.width()>=960){		
+			$window.on('scroll', function(){
+				
+			if ($window.width()>=960){
+				let scrollPosition = $window.scrollTop();
+				if (scrollPosition>=300){
+					$('#software_eng').animate({opacity: 0, height: 30}, {duration: 1});
+				}
+				else{$('#software_eng').animate({opacity: 1, height: 30}, {duration: 1});}
+				
+				if (scrollPosition > ($window.width()*0.2508)+183.12){
+					scrollPosition = ($window.width()*0.2508)+183.12;
+				}
+				else if (scrollPosition<210){
+					scrollPosition = 210;
+				}
+				let CSSscrollPosString = String((45/(scrollPosition/10000))/100)+"%";
+				let CSSscrollPosOpacity = String(30/scrollPosition);
+				// console.log(CSSscrollPosString);
+				// // console.log(CSSscrollPosOpacity);
+				// console.log(scrollPosition)
+				
+				if (scrollPosition > 380){
+					// console.log($("#links-to-me span:first"));
+					$('#intro-tab, #about-tab, #education-tab, #projects-tab, #contact-tab, #pers_title, #skill-tab, #exp-tab').animate({opacity: 0, height: 30}, {duration: 50});
+				}
+				else {
+					$('#intro-tab, #about-tab, #education-tab, #projects-tab, #contact-tab, #pers_title, #skill-tab, #exp-tab').animate({opacity: 1, height: 30}, {duration: 30});
+					$nav_text.animate({opacity: 1}, {duration: 1});
+					
+				}
+				$("#header").animate({width: CSSscrollPosString},
+									//   opacity: CSSscrollPosOpacity},
+										{duration:50});
+				$('#main').animate({marginLeft: CSSscrollPosString},{duration: 50});
+			}
+		}) 
+		}
+		
+		$('#berea').mouseover(function(){
+			$('#berea').animate
+		}).mouseout(function(){
+			
+		});
 	// Nav.
 		var $nav_a = $nav.find('a');
 
 		$nav_a
 			.addClass('scrolly')
 			.on('click', function(e) {
-
+				console.log("Nav Active")
 				var $this = $(this);
-
+				console.log($nav_a)
 				// External link? Bail.
 					if ($this.attr('href').charAt(0) != '#')
 						return;
@@ -43,6 +91,7 @@
 					e.preventDefault();
 
 				// Deactivate all links.
+					// console.log($nav_a);
 					$nav_a.removeClass('active');
 
 				// Activate link *and* lock it (so Scrollex doesn't try to activate other links as we're scrolling to this one's section).
@@ -51,6 +100,7 @@
 						.addClass('active-locked');
 
 			})
+
 			.each(function() {
 
 				var	$this = $(this),
@@ -119,5 +169,6 @@
 					target: $body,
 					visibleClass: 'header-visible'
 				});
+
 
 })(jQuery);

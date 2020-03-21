@@ -6,13 +6,13 @@
 -->
 <html>
 	<head>
-		<title>Prologue by HTML5 UP</title>
+		<title>Giorgi Lomia</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
         <script src="https://code.iconify.design/1/1.0.4/iconify.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="icon" href="images/logo.png">
+        <link rel="icon" href="images/deep_lern_logo.png">
 	</head>
 	<body class="is-preload">
 
@@ -23,12 +23,13 @@
 
 					<!-- Logo -->
 						<div id="logo">
-							<!--<span class="image avatar48">--><img src="images/avatar_me.jpg" width="100" height="100" align="left" alt="" /><!--</span>-->
-							<h1 id="title">Giorgi Lomia</h1>
-							<p>Software Engineer</p>
+							<img src="images/avatar_me.jpg" width="80" height="80" align="left" alt="" hspace="100"/>
+                            <div id="pers_title">
+                                <h1 id="title" style="text-align: left" > Giorgi Lomia</h1>
+                                <div id='software_eng'><p style="text-align: left"> Software Engineer</p></div>
+                            </div>
 						</div>
-                    <div class="top">
-
+                    <div class="top" id = "links-to-me">
 					<!-- Social Icons -->
 						<ul class="icons">
 							<li><a href="https://www.linkedin.com/in/giorgi-lomia-30ab53152/" class="icon brands fa-linkedin" target="_blank"><span class="label">Linkedin</span></a></li>
@@ -41,11 +42,13 @@
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
-								<li><a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
-								<li><a href="#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
-                                <li><a href="#education" id="education-link"><span class="icon solid fa-graduation-cap">Education</span></a></li>
-                                <li><a href="#projects" id="projects-link"><span class="icon solid fa-laptop-code">Projects</span></a></li>
-								<li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
+								<li><a href="#top" id="top-link"><span class="icon solid fa-home"><div id="intro-tab">Intro</div></span></a></li>
+								<li><a href="#about" id="about-link"><span class="icon solid fa-user"><div id="about-tab">About Me</div></span></a></li>
+								<li><a href="#skills" id="skills-link"><span class="icon solid fa-cog"><div id="skill-tab">My Skills</div></span></a></li>
+								<li><a href="#experience" id="exp-link"><span class="icon solid fa-briefcase"><div id="exp-tab">My Experience</div></span></a></li>
+								<li><a href="#projects" id="projects-link"><span class="icon solid fa-laptop-code"><div id="projects-tab">Projects</div></span></a></li>
+								<li><a href="#education" id="education-link"><span class="icon solid fa-graduation-cap"><div id="education-tab">Education</div></span></a></li>
+								<li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope"><div id="contact-tab">Contact Me</div></span></a></li>
 							</ul>
 						</nav>
 
@@ -63,11 +66,11 @@
 						<div class="container">
 
 							<header>
-								<p><h2 class="alt">Hi! I'm <strong>Giorgi Lomia</strong>, a passionate and creative software engineer.<br /></p>
+								<p><h2 class="alt">Hi! I'm <strong><strong>Giorgi Lomia</strong></strong>, a passionate and creative software engineer.<br /></p>
 							</header>
 
 							<footer>
-								<a href="files/GiorgiLomiaResume.pdf" class="button " download>Resume</a>
+								<a href="files/GiorgiLomiaResume.pdf" class="button " download target="_blank">Resume</a>
 							</footer>
 
 						</div>
@@ -93,13 +96,14 @@
 
 						</div>
 					</section>
-                
-                <!-- Education -->
-					<section id="education" class="three">
+				
+				<!-- Skills -->
+
+					<section id="skills" class="three">
 						<div class="container">
 
 							<header>
-								<h2>My Edducation</h2>
+								<h2>About Me</h2>
 							</header>
 
 							<a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
@@ -113,13 +117,35 @@
 
 						</div>
 					</section>
-                
-				<!-- Portfolio -->
-					<section id="projects" class="four">
+
+				<!-- Experience -->
+
+					<section id="experience" class="four">
 						<div class="container">
 
 							<header>
-								<h2>Portfolio</h2>
+								<h2>About Me</h2>
+							</header>
+
+							<a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
+
+							<p>Tincidunt eu elit diam magnis pretium accumsan etiam id urna. Ridiculus
+							ultricies curae quis et rhoncus velit. Lobortis elementum aliquet nec vitae
+							laoreet eget cubilia quam non etiam odio tincidunt montes. Elementum sem
+							parturient nulla quam placerat viverra mauris non cum elit tempus ullamcorper
+							dolor. Libero rutrum ut lacinia donec curae mus vel quisque sociis nec
+							ornare iaculis.</p>
+
+						</div>
+					</section>
+
+				<!-- Projects -->
+					
+					<section id="projects" class="five">
+						<div class="container">
+
+							<header>
+								<h2>Projects</h2>
 							</header>
 
 							<p>Vitae natoque dictum etiam semper magnis enim feugiat convallis convallis
@@ -128,43 +154,56 @@
 							fusce hendrerit lacus ridiculus.</p>
 
 							<div class="row">
+								
+									<div class="col-4 col-12-mobile">
+										<article class="item" id="deep">
+											<div class = 'container'>
+												<link rel="stylesheet" href="assets/css/overlay_projects.css">
+												<a href="https://github.com/GioLomia/Deep_Learner" class="image fit" target="_blank">
+													<img src="images/deep_lern_logo.png" alt="" width="100%" height="100%"/></a>
+												<div class = 'overlay'>
+													<div id = "berea_logo" class="collegeIm"><a href="https://www.berea.edu/" class="image featured" target="_blank">
+												</div>
+											</div>
+											<header>
+												<h3>Deep Learner</h3>
+											</header>
+										</article>
+										<article class="item" id = 'detective'>
+											<div class = 'container'>
+											<a href="https://github.com/GioLomia/Barcode-QR-Detective" class="image fit" target="_blank">
+												<img src="images/barDetective.png" alt="" /></a>
+											
+											</div>
+											<header>
+												<h3>Barcode Detective</h3>
+											</header>
+										</article>
+							
+								</div>
 								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/banner_new.jpg" alt="" /></a>
+									<article class="item" id = 'kwf'>
+										<a href="https://github.com/GioLomia/Detection_of_camouflaged_animals/blob/master/Paper.pdf" class="image fit" target="_blank"><img src="images/kwf.png" alt="" /></a>
 										<header>
-											<h3>Ipsum Feugiat</h3>
+											<h3>Camouflage Detection</h3>
 										</header>
 									</article>
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
+									<article class="item" id="Instaparse">
+										<a href="https://github.com/GioLomia/InstaParse" class="image fit" target="_blank"><img src="images/Instaparse.png" alt="" /></a>
 										<header>
-											<h3>Rhoncus Semper</h3>
+											<h3>InstaParse</h3>
 										</header>
 									</article>
 								</div>
 								<div class="col-4 col-12-mobile">
 									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic04.jpg" alt="" /></a>
+										<a href="#" class="image fit"><img src="images/ml_from_scratch.PNG" alt="" target="_blank"/></a>
 										<header>
-											<h3>Magna Nullam</h3>
+											<h3>Machine Learning from Scratch</h3>
 										</header>
 									</article>
 									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic05.jpg" alt="" /></a>
-										<header>
-											<h3>Natoque Vitae</h3>
-										</header>
-									</article>
-								</div>
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
-										<header>
-											<h3>Dolor Penatibus</h3>
-										</header>
-									</article>
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
+										<a href="#" class="image fit"><img src="images/pic07.jpg" alt="" target="_blank"/></a>
 										<header>
 											<h3>Orci Convallis</h3>
 										</header>
@@ -174,10 +213,35 @@
 
 						</div>
 					</section>
+                
+				<!-- Education -->
+					<section id="education" class="six">
+						<div id='ed' class="container">
+
+							<header>
+								<h2>My Edducation</h2>
+							</header>
+								<link rel="stylesheet" href="assets/css/overlay_projects.css">
+							<div class = 'container'>
+								<div id = "berea"><a href="https://www.berea.edu/" class="image_featured" target="_blank">
+									<img src="images/Berea_college.jpg" alt="" /></div></a>
+								<div class='overlay'>
+									<div id = "berea_logo" class="collegeIm"><a href="https://www.berea.edu/" class="image featured" target="_blank"><img src="images/berea-college-logo.png" alt="" width="200px" height="200px" /></a></div>
+							</div>
+						</div>
+						</div>
+						<p>Tincidunt eu elit diam magnis pretium accumsan etiam id urna. Ridiculus
+						ultricies curae quis et rhoncus velit. Lobortis elementum aliquet nec vitae
+						laoreet eget cubilia quam non etiam odio tincidunt montes. Elementum sem
+						parturient nulla quam placerat viverra mauris non cum elit tempus ullamcorper
+						dolor. Libero rutrum ut lacinia donec curae mus vel quisque sociis nec
+						ornare iaculis.</p>
+						
+					</section>
 
 
 				<!-- Contact -->
-					<section id="contact" class="five">
+					<section id="contact" class="seven">
 						<div class="container">
 
 							<header>
@@ -207,15 +271,6 @@
 
 			</div>
 
-		<!-- Footer -->
-			<div id="footer">
-
-				<!-- Copyright -->
-					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-
-			</div>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
