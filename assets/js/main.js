@@ -48,31 +48,31 @@
 				}
 				let CSSscrollPosString = String((45/(scrollPosition/10000))/100)+"%";
 				let CSSscrollPosOpacity = String(30/scrollPosition);
-				console.log(CSSscrollPosString);
-				// console.log(CSSscrollPosOpacity);
-				console.log(scrollPosition)
+				// console.log(CSSscrollPosString);
+				// // console.log(CSSscrollPosOpacity);
+				// console.log(scrollPosition)
 				
 				if (scrollPosition > 380){
 					// console.log($("#links-to-me span:first"));
-					$('#intro-tab, #about-tab, #education-tab, #projects-tab, #contact-tab, #pers_title').animate({opacity: 0, height: 30}, {duration: 1});
+					$('#intro-tab, #about-tab, #education-tab, #projects-tab, #contact-tab, #pers_title, #skill-tab, #exp-tab').animate({opacity: 0, height: 30}, {duration: 50});
 				}
 				else {
-					$('#intro-tab, #about-tab, #education-tab, #projects-tab, #contact-tab, #pers_title').animate({opacity: 1, height: 30}, {duration: 1});
+					$('#intro-tab, #about-tab, #education-tab, #projects-tab, #contact-tab, #pers_title, #skill-tab, #exp-tab').animate({opacity: 1, height: 30}, {duration: 30});
 					$nav_text.animate({opacity: 1}, {duration: 1});
 					
 				}
 				$("#header").animate({width: CSSscrollPosString},
 									//   opacity: CSSscrollPosOpacity},
-										{duration:10});
-				$('#main').animate({marginLeft: CSSscrollPosString},{duration: 10});
+										{duration:50});
+				$('#main').animate({marginLeft: CSSscrollPosString},{duration: 50});
 			}
 		}) 
 		}
 		
 		$('#berea').mouseover(function(){
-			$('<div id="headerToggle">' +
-			'<a href="#header" class="toggle"></a>' +
-		'</div>').appendTo($body);
+			$('#berea').animate
+		}).mouseout(function(){
+			
 		});
 	// Nav.
 		var $nav_a = $nav.find('a');

@@ -2269,6 +2269,7 @@ input, select, textarea {
 			}
 
 			#main > section.two {
+
 				background-color: #f5fafa;
 			}
 
@@ -2279,7 +2280,26 @@ input, select, textarea {
 			#main > section.four {
 				background-color: #e8edec;
 			}
-
+	#deep {
+		width: 70%;
+		height: 40%;
+		margin-left: 10%;
+	}
+	#detective {
+		margin-top: 20%;
+		width: 70%;
+		height: 70%;
+		margin-left: 10%;
+	}
+	#kwf {
+		width: 90%;
+		height: 40%;
+	}
+	#Instaparse {
+		width: 90%;
+		height: 10%;
+		margin-top: 10%;
+	}
 /* Wide */
 
 	@media screen and (min-width: 961px) and (max-width: 1880px) {
