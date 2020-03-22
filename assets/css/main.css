@@ -2032,7 +2032,9 @@ input, select, textarea {
 		}
 
 /* Header */
-
+#intro-tab, #about-tab, #education-tab, #projects-tab, #contact-tab, #pers_title, #skill-tab, #exp-tab{
+	height: 20px;
+}
 	#header {
 		overflow: hidden;
 		display: -moz-flex;

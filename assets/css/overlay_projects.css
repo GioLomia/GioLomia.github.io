@@ -25,14 +25,14 @@
     transition: .7s ease;
     overflow: none;
 }
-/* .container:hover .overlay{
+.container:hover .overlay{
     opacity: 1;
     transition: .7s ease;
 }
 .container:hover .image_featured{
     opacity: 0.3;
     transition: .7s ease;
-} */
+}
 .DemoGif{
     position: relative;
     width: 0px;

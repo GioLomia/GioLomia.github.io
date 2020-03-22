@@ -10,8 +10,6 @@
 		$body = $('body'),
 		$nav = $('#nav');
 
-	// $('#main').width($window.width());
-	// let scrolls=0;
 	// Breakpoints.
 		breakpoints({
 			wide:      [ '961px',  '1880px' ],
@@ -28,50 +26,44 @@
 			}, 100);
 		});
 		
-		console.log($window.width());
-		if ($window.width()>=960){		
-			$window.on('scroll', function(){
-				
-			if ($window.width()>=960){
-				let scrollPosition = $window.scrollTop();
-				if (scrollPosition>=300){
-					$('#software_eng').animate({opacity: 0, height: 30}, {duration: 1});
-				}
-				else{$('#software_eng').animate({opacity: 1, height: 30}, {duration: 1});}
-				
-				if (scrollPosition > ($window.width()*0.2508)+183.12){
-					scrollPosition = ($window.width()*0.2508)+183.12;
-				}
-				else if (scrollPosition<210){
-					scrollPosition = 210;
-				}
-				let CSSscrollPosString = String((45/(scrollPosition/10000))/100)+"%";
-				let CSSscrollPosOpacity = String(30/scrollPosition);
-				// console.log(CSSscrollPosString);
-				// // console.log(CSSscrollPosOpacity);
-				// console.log(scrollPosition)
-				
-				if (scrollPosition > 380){
-					// console.log($("#links-to-me span:first"));
-					$('#intro-tab, #about-tab, #education-tab, #projects-tab, #contact-tab, #pers_title, #skill-tab, #exp-tab').animate({opacity: 0, height: 20}, {duration: 50});
-				}
-				else {
-					$('#intro-tab, #about-tab, #education-tab, #projects-tab, #contact-tab, #pers_title, #skill-tab, #exp-tab').animate({opacity: 1, height: 20}, {duration: 30});
-					$nav_text.animate({opacity: 1}, {duration: 1});
-					
-				}
-				$("#header").animate({width: CSSscrollPosString},
-									//   opacity: CSSscrollPosOpacity},
-										{duration:50});
-				$('#main').animate({marginLeft: CSSscrollPosString},{duration: 50});
-			}
-		}) 
-		}
-		
-		$('#deep, image fit').hover(function(){
-			console.log("overlay on", $("#deep, container, image_featured"));
 
-		});
+		// console.log($window.width());
+		// if ($window.width()>=960){		
+		// 	$window.on('scroll', function(){
+				
+		// 	if ($window.width()>=960){
+		// 		let scrollPosition = $window.scrollTop();
+		// 		if (scrollPosition>=300){
+		// 			$('#software_eng').animate({opacity: 0, height: 30}, {duration: 1});
+		// 		}
+		// 		else{$('#software_eng').animate({opacity: 1, height: 30}, {duration: 1});}
+				
+		// 		if (scrollPosition > ($window.width()*0.2508)+183.12){
+		// 			scrollPosition = ($window.width()*0.2508)+183.12;
+		// 		}
+		// 		else if (scrollPosition<210){
+		// 			scrollPosition = 210;
+		// 		}
+		// 		let CSSscrollPosString = String((45/(scrollPosition/10000))/100)+"%";
+		// 		let CSSscrollPosOpacity = String(30/scrollPosition);
+
+				
+		// 		if (scrollPosition > 380){
+		// 			$('#intro-tab, #about-tab, #education-tab, #projects-tab, #contact-tab, #pers_title, #skill-tab, #exp-tab').animate({opacity: 0, height: 20}, {duration: 50});
+		// 		}
+		// 		else {
+		// 			$('#intro-tab, #about-tab, #education-tab, #projects-tab, #contact-tab, #pers_title, #skill-tab, #exp-tab').animate({opacity: 1, height: 20}, {duration: 30});
+		// 			$nav_text.animate({opacity: 1}, {duration: 1});
+					
+		// 		}
+		// 		$("#header").animate({width: CSSscrollPosString},
+		// 							//   opacity: CSSscrollPosOpacity},
+		// 								{duration:50});
+		// 		$('#main').animate({marginLeft: CSSscrollPosString},{duration: 50});
+		// 	}
+		// }) 
+		// }
+
 
 	// Nav.
 		var $nav_a = $nav.find('a');
