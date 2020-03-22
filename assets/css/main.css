@@ -2034,6 +2034,7 @@ input, select, textarea {
 /* Header */
 
 	#header {
+		overflow: hidden;
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
@@ -2140,7 +2141,8 @@ input, select, textarea {
 		list-style: none;
 		padding-left: 0;
 		margin-bottom: 0;
-        width: 100%;
+		width: 100%;
+		
 	}
 
 		#nav ul li {

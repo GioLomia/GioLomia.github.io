@@ -3,15 +3,11 @@
 
 
 .image_featured{
-    width: "10px";
-    height: "10px";
     position: relative;
 }
 .container {
     position: relative;
-    width: 10%;
-    height: 10%;
-    overflow: auto;
+    width: 100%;
 }
 .overlay{
     position: absolute;
@@ -20,23 +16,21 @@
     left: 0;
     right: 0;
     height: 100%;
-    width: 100%;
+    width: 20%;
     opacity: 0;
     transition: .7s ease;
-    overflow: none;
+    
 }
-/* .container:hover .overlay{
+.overlay:hover .overlay{
     opacity: 1;
     transition: .7s ease;
 }
 .container:hover .image_featured{
     opacity: 0.3;
     transition: .7s ease;
-} */
-.DemoGif{
+}
+.collegeIm{
     position: relative;
-    width: 0px;
-    height: 10px;
-    left: 0%;
-    top: 0%
+    left: 190%;
+    top: 10%
 }

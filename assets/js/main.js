@@ -9,8 +9,7 @@
 	var	$window = $(window),
 		$body = $('body'),
 		$nav = $('#nav');
-		$nav_text = $('#nav > ul > li > a > span');
-		console.log($nav_text);
+
 	// $('#main').width($window.width());
 	// let scrolls=0;
 	// Breakpoints.
@@ -54,10 +53,10 @@
 				
 				if (scrollPosition > 380){
 					// console.log($("#links-to-me span:first"));
-					$('#intro-tab, #about-tab, #education-tab, #projects-tab, #contact-tab, #pers_title, #skill-tab, #exp-tab').animate({opacity: 0, height: 30}, {duration: 50});
+					$('#intro-tab, #about-tab, #education-tab, #projects-tab, #contact-tab, #pers_title, #skill-tab, #exp-tab').animate({opacity: 0, height: 20}, {duration: 50});
 				}
 				else {
-					$('#intro-tab, #about-tab, #education-tab, #projects-tab, #contact-tab, #pers_title, #skill-tab, #exp-tab').animate({opacity: 1, height: 30}, {duration: 30});
+					$('#intro-tab, #about-tab, #education-tab, #projects-tab, #contact-tab, #pers_title, #skill-tab, #exp-tab').animate({opacity: 1, height: 20}, {duration: 30});
 					$nav_text.animate({opacity: 1}, {duration: 1});
 					
 				}
@@ -69,11 +68,11 @@
 		}) 
 		}
 		
-		$('#berea').mouseover(function(){
-			$('#berea').animate
-		}).mouseout(function(){
-			
+		$('#deep, image fit').hover(function(){
+			console.log("overlay on", $("#deep, container, image_featured"));
+
 		});
+
 	// Nav.
 		var $nav_a = $nav.find('a');
 
