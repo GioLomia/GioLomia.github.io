@@ -9,7 +9,7 @@
     position: relative;
     width: 100%;
 }
-.overlay{
+.overlay_ed{
     position: absolute;
     margin-left: 40%;
     margin-top: 5%;
@@ -23,8 +23,8 @@
     transition: .7s ease;
     
 }
-.container:hover .overlay{
-    opacity: 10000000000;
+.container:hover .overlay_ed{
+    opacity: 1;
     transition: .7s ease;
 }
 .container:hover .image_featured{

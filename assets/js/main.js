@@ -25,7 +25,6 @@
 				$body.removeClass('is-preload');
 			}, 100);
 		});
-		
 
 		// console.log($window.width());
 		// if ($window.width()>=960){		

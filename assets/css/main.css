@@ -1977,17 +1977,89 @@ input, select, textarea {
 			background-color: #7eaeac;
 		}
 
+		#projects {
+			position: relative;
+			height: 40em;
+			margin-bottom: 0;
+		}
+
+		.project_grid{
+			display: grid;
+			grid-template-columns: 2fr 4fr 2fr ;
+			margin-left: 1em;
+		}
+		
+		.project_column{
+			display: grid;
+			grid-template-rows: 1fr 1fr 1fr 1fr;
+			height: 20em;
+			grid-row-gap: 2em;
+		}
+
+		.project{
+			position: relative;
+			left: 0%;
+			width: 1em;
+			border: #888;
+			border-width: 2em;
+		}
+		
+		.overlay{
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			height: 100%;
+			opacity: 0;
+			left: 0px;
+			width: 10em;
+			opacity: 0;
+			transition: .5s ease;
+			background-color: floralwhite;
+		}
+
+		.project:hover .overlay {
+			opacity: 0.9;
+			height: 7em;
+			width: 7em;
+		}
+
+		.text {
+			position: absolute;
+			top: 4em;
+			bottom: 0;
+			left: 4.5em;
+			right: 0;
+			color: black;
+			font-size: 0.63em;
+			
+			line-height: 1.1em;
+			transform: translate(-50%, -50%);
+			text-align: left;
+		  }
+
+		.project > a > img{
+			width: 5.5em;
+			align-content: left;
+			margin-left: 0.5em;
+		}
+		.project > h3{
+			width: 9em;
+			font-size: 0.7em;
+			text-align: center;
+		}
+		
 /* Item */
 
 	.item {
 		box-shadow: 0 0.05em 0.15em 0 rgba(0, 0, 0, 0.05);
-		margin-bottom: 40px;
+		/* margin-bottom: 0.5em; */
 	}
 
 		.item header {
 			background: #fff;
 			margin: 0;
-			padding: 1em 0 1em 0;
+			/* padding: 1em 0 1em 0; */
 			font-size: 0.8em;
 		}
 
@@ -2370,12 +2442,6 @@ input, select, textarea {
 				width: 1.75em;
 			}
 
-		/* Item */
-
-			.item {
-				margin-bottom: 20px;
-			}
-
 		/* Header */
 
 			#header {
@@ -2446,7 +2512,7 @@ input, select, textarea {
 		/* Item */
 
 			.item {
-				margin-bottom: 15px;
+				margin-bottom: 1px;
 			}
 
 		/* Icons */
